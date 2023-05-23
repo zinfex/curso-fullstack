@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tags HTML5</title>
+    <!-- CSS EXTERNO -->
+    <!-- CSS INTERNO -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* https://dontpad.com/iw */
+        header {
+            height: 100px;
+            /* margin-top: 10px; */
+            width: 100%;
+        } 
+      
+        #logo img {
+            display: block;
+            margin: 0 auto;
+        }
+        #logo {
+            background-color: pink;
+            width: 10%;
+            float: left;
+        }
+        #menu {
+            background-color: red;
+            width: 90%;
+            float: left
+        }
+
+        #menu ul li {
+            float: left;
+            list-style: none;
+            margin: 5px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            padding: 10px;
+        }
+
+        #slideshow {
+            width: 100%;
+            height: 300px;
+            background-color: rebeccapurple;
+            padding: 10px;
+        }
+
+        #cards {
+            display: flex;
+        }
+
+        .cartao {
+            width: 25%;
+            
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+        .cartao img {
+            width: 100%;
+        }
+        #cards-two {
+            display: flex;
+        }
+        .texto { 
+            width: 40%;
+            padding: 20px;
+        }
+        .imagem {
+            width: 60%;
+            padding: 20px;
+        }
+        .imagem img {
+            width: 100%;
+        }
+        footer {
+            display: flex;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- ATRIBUNDO CSS NA TAG - CSS INLINE -->
+    <header style="background-color: yellow;">
+        <!-- # = ID -->
+        <div id="logo">
+            <img src="images/logo.png" alt="Fornalha" width="100px">
+        </div>
+        <div id="menu">
+            <ul>
+                <li>Home</li>
+                <li>Quem Somos</li>
+                <li>Produtos</li>
+                <li>Contato</li>
+            </ul>
+        </div>
+    </header>
+
+    <nav style="background-color: gray; color: white;">
+        <ul>
+            <li>XTudo</li>
+            <li>XFrango</li>
+            <li>XBacon</li>
+            <li>XCarne</li>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="slideshow">
+            <p>Slideshow</p>
+        </div>
+        
+        <div id="cards">
+            <div class="cartao">
+                <img src="https://viagemeturismo.abril.com.br/wp-content/uploads/2016/12/14179421596_b95c10db10_o.jpeg?quality=70&strip=info&w=1280&h=720&crop=1" alt="">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio rem nesciunt aliquam facere itaque dolorem doloremque voluptas aspernatur sunt possimus, ipsam quidem sequi minus! Temporibus voluptas recusandae omnis hic dignissimos?</p>
+            </div>
+            <div class="cartao">
+                <img src="https://viagemeturismo.abril.com.br/wp-content/uploads/2016/12/14179421596_b95c10db10_o.jpeg?quality=70&strip=info&w=1280&h=720&crop=1" alt="">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio rem nesciunt aliquam facere itaque dolorem doloremque voluptas aspernatur sunt possimus, ipsam quidem sequi minus! Temporibus voluptas recusandae omnis hic dignissimos?</p>
+            </div>
+            <div class="cartao">
+                <img src="https://viagemeturismo.abril.com.br/wp-content/uploads/2016/12/14179421596_b95c10db10_o.jpeg?quality=70&strip=info&w=1280&h=720&crop=1" alt="">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio rem nesciunt aliquam facere itaque dolorem doloremque voluptas aspernatur sunt possimus, ipsam quidem sequi minus! Temporibus voluptas recusandae omnis hic dignissimos?</p>
+            </div>
+            <div class="cartao">
+                <img src="https://viagemeturismo.abril.com.br/wp-content/uploads/2016/12/14179421596_b95c10db10_o.jpeg?quality=70&strip=info&w=1280&h=720&crop=1" alt="">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio rem nesciunt aliquam facere itaque dolorem doloremque voluptas aspernatur sunt possimus, ipsam quidem sequi minus! Temporibus voluptas recusandae omnis hic dignissimos?</p>
+            </div>
+        </div>
+
+        <div id="cards-two">
+            <div class="texto">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum perspiciatis culpa veniam magni, omnis minima iste quia neque cupiditate velit maxime dolorem molestiae sit officia, tenetur enim facere accusantium harum?
+            </div>
+            <div class="imagem">
+                <img src="https://img.freepik.com/fotos-gratis/paisagem-de-nevoeiro-matinal-e-montanhas-com-baloes-de-ar-quente-ao-nascer-do-sol_335224-794.jpg" alt="">
+            </div>
+        </div>
+
+    </main>
+    <!-- 
+        footer {
+            display: flex;
+        }
+        .card-footer {
+            width: 33.33%;
+            padding: 20px;
+            border: 1px solid black;
+        }
+     -->
+    <footer>
+        <!-- https://dontpad.com/iw -->
+        <!-- CRIAR 3 DIVS COM CLASS, COLOCAR DISPLAY FLEX COM CSS -->
+        <div class="card-footer">F1</div>
+        <div class="card-footer">F2</div>
+        <div class="card-footer">F3</div>
+    </footer>
+
+</body>
+</html>

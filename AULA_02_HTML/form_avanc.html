@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contato</title>
+</head>
+
+<body>
+
+    <!--  INFORMAÇÕES  -->
+    <h2>CONTATO</h2>
+    <form action="https://google.com.br" method="POST">
+        <label>Nome</label>
+        <br>
+        <input type="text" name="nome">
+        <br>
+
+        <label>Senha</label>
+        <br>
+        <input type="password">
+        <br>
+
+        <label>Email</label>
+        <br>
+        <input type="email">
+        <br>
+
+        <label>Telefone</label>
+        <br>
+        <input type="tel">
+        <br>
+
+        <label>mensagem</label>
+        <br>
+        <textarea name="mensagem" cols="30" rows="10"></textarea>
+        <br>
+        <input type="submit" value="Mandar">
+        <input type="reset" value="limpar">
+    </form>
+
+        <!--   PESQUISA   -->
+    <hr>
+    <form action="https://www.google.com.br/search" method="GET" target="_blank">
+        <label for="">Pesquise: </label>
+        <input type="text" name="q">
+        <input type="submit" value="buscar">
+    </form>
+    <hr>
+
+    <!-- SEXO -->
+    <form action="">
+        <label>Sexo</label>
+        <br>
+        <input type="radio" name="sexo" id="masculino" value="masculino">
+        <label for="masculino">masculino</label>
+        <br>
+        <input type="radio" name="sexo" id="feminino" value="feminino">
+        <label for="feminino">feminino</label>
+        <br> <br>
+
+        <!--  CURSOS  -->
+        <h4>Cursos Realizados</h4>
+        <input type="checkbox" id="html" name="html" value="HTML">
+        <label for="html">HTML5</label>
+        <br>
+
+        <input type="checkbox" name="css" value="CSS">
+        <label for="css">CSS</label>
+        <br>
+
+        <input type="checkbox" name="javascript" value="js">
+        <label for="js">JAVASCRIPT</label>
+
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+header {
+    text-align: center;
+    padding: 35px;
+}
+
+body {
+    background-color: rgb(39, 128, 207);
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+div {
+    display: block;
+}
+
+#produtos li {
+    display: inline;
+    padding: 180px;
+}
+#produtos {
+    background-color: rgb(46, 50, 124);
+    text-align: center;
+}
+
+#slideshow {
+    width: 98%;
+    height: 300px;
+    background-color: aquamarine;
+}
+
+#anuncios {
+    display: flex;
+}
+
+#anuncios img {
+    width: 200px;
+    height: 189px;
+    padding: 50px;
+}
+
+.prod {
+    border: solid black 1px;
+    margin: 10px;
+}
+

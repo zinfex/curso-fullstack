@@ -1,0 +1,115 @@
+* { /*APLICAR PARA TODAS AS TAGS*/
+    margin: 10;
+    padding: 0;
+}
+
+/*--------------- PARTE DE CIMA DA PÁGINA -----------*/
+header { /*PARTE DE CIMA DA PÁGINA*/
+    margin: 0px;
+    background-color: #29130c;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: black 2px 2px 8px 2px;
+    padding-right: 30px;
+}
+
+#logo img { /*IMAGEM DA LOGO*/
+    margin-top: 100px;
+    margin-left: 50px;
+    height: 150px;
+}
+
+#menu nav ul { 
+    display: flex; /*DEIXAR A LISTA DE LADO*/
+}
+
+#menu nav ul li {
+    list-style: none; /*tirar a bolinha*/
+    margin-left: 10px;
+    padding-inline: 35px; /*distanciar o menu*/
+}
+
+#menu nav ul li a { /*LINK DA LISTA*/
+    color: white;  
+    text-decoration: none; /*tirar decoração do texto*/
+}
+/*---------------------------------------------------*/
+
+
+#slideshow {
+    height: 555px;
+    background-image: url('../images/hamburguer.jpeg'); 
+    background-size: cover; /*Imagem fica se adequano a tela*/
+    margin-top: 15px; 
+    box-shadow: black 2px 2px 8px 2px;
+    background-position: 10% 80%;
+}
+
+#cartoes {
+    display: flex;
+    justify-content: center;
+}
+
+.cartao {
+    width: 33.33%;
+    height: 50px;
+    background-color: grey;
+    margin: 10px 10px;
+}
+
+#conteudo {
+    display: flex;
+    justify-content: center;
+}
+
+#conteudo .texto {
+    width: 60%;
+    height: 200px;
+    background-color: red;
+    padding: 10px;
+}
+
+#conteudo .imagem-texto {
+    width: 40%;
+    height: 200px;
+    background-color: blue;
+    padding: 10px;
+    background-image: url('../images/banner.jpeg');
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+footer #cartoes-rodape {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #29130c;
+    color: white;
+    margin-top: 10px;
+}
+
+footer #cartoes-rodape .cartao-rodape {
+    width: 33.33%;
+    padding: 40px;
+}
+
+
+/*---BOTÃO WHATSAPP---*/
+.whats {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.whats img{
+    width: 67px;
+    transition: 0.3s ease-in-out;
+}
+
+.whats :hover {
+    transform: scale(1.2); 
+}
+/*-----------------*/
+

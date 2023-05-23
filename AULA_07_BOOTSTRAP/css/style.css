@@ -1,0 +1,17 @@
+header .row{
+    
+}
+
+#slideshow {
+    background-color: rgb(255, 255, 255);
+
+}
+
+#img {
+    background-color: black;
+    height: 200px;
+}
+
+.row#coluna {height: 340px;}
+
+footer .row {height: 200px;}

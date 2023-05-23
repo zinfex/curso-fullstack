@@ -1,0 +1,25 @@
+@media screen and (max-width: 500px) { /*CELULAR*/
+    header {
+        background-color: pink;
+        flex-direction: column;
+    }
+    .cards {
+        flex-direction: column;
+    }
+    .card {
+        width: 95%;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 800px) { /*TABLET*/
+    header {
+        background-color: greenyellow;
+        flex-direction: row;
+    }
+    .card {
+        width: 85%;
+        text-align: center;
+        margin: 5px;
+    }
+}
