@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onkeypress="console.log('teclas desparadas')">
+    
+    <!-- EVENTOS DE CLIQUES -->
+    <button onclick="teste()">Botão JS Eventos</button>
+    <button ondblclick="alert('Dois Cliques')">Dois Cliques</button>
+
+    <!-- EVENTOS DE MOUSE MOVER-->
+    <button onmousemove="alert('Mouse por cima')">
+        Mouse por cima
+    </button>
+
+    <script>
+        function teste() {
+            alert('teste com sucesso')
+        }
+
+        function somar(n1, n2) {
+            alert(n1 + n2);
+        }
+
+        let n1 = Number(prompt('Primeiro valor'))
+        let n2 = Number(prompt('Segundo valor'))
+        somar(n1, n2)
+    </script>
+</body>
+</html>
