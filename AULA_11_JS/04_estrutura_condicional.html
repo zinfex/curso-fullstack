@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ESTRUTURA CONDICIONAL
+        // OPERADORES DE COMPARACAO
+        var numero = 10;
+        var checar = numero > 10;
+        alert(checar);
+        if(checar) {
+            alert("Verdadeiro: Numero é maior que 10");
+        } else {
+            alert("Falso: Numero é menor ou igual a 10");
+        }
+
+        // DUAS CONDICOES - && AND E
+        var condicao1 = 10 < 12;
+        var condicao2 = 5 < 10;
+        if(condicao1 && condicao2) {
+            alert("CONDICAO1 e CONDICAO2 sao VERDADEIRAS");
+        } else {
+            alert("Uma das condicoes sao falsas");
+        }
+
+        // DUAS CONDICOES - || OR OU
+        var condicao1 = 10 < 12;
+        var condicao2 = 5 < 10;
+        if(condicao1 || condicao2) {
+            alert("CONDICAO1 OU CONDICAO2 sao VERDADEIRA");
+        } else {
+            alert("AS DUAS sao falsas");
+        }
+
+        // CONDICIONAIS COM IF..ELSE E ELSE...IF
+        var idade = prompt("Qual é a sua idade?");
+        if(idade <= 2) {
+            alert("É um bebê");
+        } else if(idade > 2 && idade < 13) {
+            alert("Criança");
+        } else if(idade >= 13 && idade <= 17) {
+            alert("Jovem");
+        } else if(idade > 18 && idade < 60) {
+            alert("Adulto");
+        } else {
+            alert("Senhor(a) de idade");
+        }
+
+        // CONDICIONAIS TERNARIAS
+        const sexo = prompt("Informe seu Sexo: Para Masculino: M - Feminino: F");
+        const mensagem = sexo == 'M' ? "Olá Homem" : "Olá Mulher";
+        alert(mensagem);
+
+
+        // SWITCH
+        switch(sexo) {
+            case 'M':
+                alert("Olá Homem Switch");
+                break;
+            case 'F':
+                alert("Olá Mulher Switch");
+                break;
+            default:
+                alert("Olá prefiro nao informar");
+                break;
+        }
+               
+    </script>
+</body>
+</html>
