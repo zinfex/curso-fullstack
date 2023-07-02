@@ -1,0 +1,21 @@
+<html>
+    <script>
+        const carros = ['fiat', 'celta', 'uno']
+        console.log(carros)
+
+        carros.push('ferrari') //empurra para ultimo da lista(AFETA O ARRAY ORIGINAL)
+        console.log(carros)
+
+        carros.pop() //Remove o ultimo item da lista (AFETA O ARRAY ORIGINAL)
+        console.log(carros) 
+
+        const carrosComuns = carros.filter(carro => { //Filtrar determinados itens da lista
+            return carro !== "ferrari"
+        })
+        console.log(carrosComuns)
+
+        console.log(carros.includes('lamborghini')) //procura se tem 'laborghini na lista, retorna false ou true'
+        console.log(carros.includes('ferrari'))
+
+    </script>
+</html>

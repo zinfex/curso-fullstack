@@ -1,0 +1,28 @@
+<html>
+    <script>
+        const fruits = ['🍎', '🍇'];
+        
+        //MAP (TRANSFORMA AS LISTAS)
+        const apples = fruits.map(function(fruit){
+            return '🍎'
+        })
+
+        console.log(fruits)
+        console.log(apples)
+
+        //EXEMPLO: FAZER UMA LISTA HTML
+        const garagem  = ['carro', 'moto']
+        const carros = garagem.map(function(carro){
+            return '<li>' + carro + '</li>'
+        })
+
+        // REVERSE
+        const fruitsReverse = [...fruits].reverse()
+        console.log(fruitsReverse)
+        
+        // FOREACH
+        fruits.forEach(function(fruit) {
+            console.log(fruit)
+        })
+    </script>
+</html>

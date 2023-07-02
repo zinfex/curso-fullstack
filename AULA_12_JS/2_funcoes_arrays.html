@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcoes de Array</title>
+</head>
+<body>
+    <script>    
+        const lista = ["Ana", "Marcio", "Wagner"];
+
+        // ADICIONA E REMOVE DA PRIMEIRA POSICAO
+        lista.unshift("Arnaldo");
+        console.log(lista);
+        lista.shift();
+
+        // ADICIONA E REMOVE DA ULTIMA POSICAO
+        lista.push("Hilda");
+        lista.pop();
+
+        // RETORNA A QUANTIDADE DO ARRAY
+        const tamanho = lista.length;
+
+        console.log(lista);
+        console.log(lista.toString());
+
+        console.log(lista.join(' - '));
+        delete lista[0];
+
+        const alunos = ["Fernanda", "Monica"];
+        const notaLista = lista.concat(alunos);
+
+        const listaA = [[1, 2, 3], [4, 5, 6]];
+        const listaB = listaA.flat();
+        console.log(listaB);
+                
+    </script>
+</body>
+</html>

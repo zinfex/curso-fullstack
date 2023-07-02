@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // FOREACH
+        const lista = [1, 2, 3, 4, 5, 6];
+
+        function lerItem(item) {
+            if(item == 3) {
+                console.log("TRes");
+            } else {
+                console.log(item);
+            }
+        }
+
+        lista.forEach(lerItem);
+
+        // MAP
+        function multiplicar(valor) {
+            return valor * 2;
+        }
+        const listaTotal = lista.map(multiplicar);
+        console.log("Multiplica por 2 MAP", listaTotal);
+
+        // FILTER
+        function filtrarNumerosPares(valor) {
+            if(valor % 2 == 0) {
+                return valor;
+            } else {
+                return null;
+            }
+        }
+        
+        const listaPares = lista.filter(filtrarNumerosPares);
+        console.log("Lista Pares FILTER", listaPares);
+
+    </script>
+</body>
+</html>

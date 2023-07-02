@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Gabriel Gomes</button>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFt3-fsDeEeWXvJSr_8UMy2kLxjM9Z9khJKg&usqp=CAU" style="display: none;">
+
+    <script>
+        const btn = document.querySelector('button');
+        btn.style.background = 'red';
+        btn.style.padding = '15px';
+
+        function aparecerImagem() {
+            img = document.querySelector('img');
+            img.style.display = 'block';
+        }
+
+        btn.addEventListener('click', aparecerImagem);
+    </script>
+</body>
+</html>

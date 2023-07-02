@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">COR</label>
+    <input type="color" id="cor">
+    <button>Usar</button>
+
+    <script>
+        const btn = document.querySelector('button')
+
+        function mudarBackground() {
+            const campo = document.querySelector('#cor');
+            const valorDoCampo = campo.value;
+            document.body.style.background = valorDoCampo;
+        }
+
+        btn.addEventListener('click', mudarBackground);
+    </script>
+</body>
+</html>
