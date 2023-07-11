@@ -1,0 +1,21 @@
+MODULO:
+JAVASCRIPT INTERMEDIARIO
+
+OBJETIVO:
+Funções:
+- getElementById()
+- getElementsByClassName()
+- getElementsByTagName()
+- querySelector()
+- querySelectorAll()
+- addEventListener - Para aplicar uma ação a tag.
+
+Propriedades:
+- value - para campos de formulários
+- innerHTML - para tags casadas <name></name>
+- style - para estilizar o elemento
+- src - para tags de img para trocar a imagem
+
+Exercício:
+- Criando um formulário e validando seus dados.
+

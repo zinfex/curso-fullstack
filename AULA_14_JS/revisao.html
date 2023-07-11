@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="titulo">Curso de JavaScript</h1>
+    <p class="modulos">Básico</p>
+    <p class="modulos">Intermediário</p>
+    <p class="modulos">Avançado</p>
+
+    <script>
+        
+        const tagTitulo = document.getElementById('titulo');
+        console.log(tagTitulo);
+        tagTitulo.style.color = 'red';
+        tagTitulo.style.background = 'yellow';
+
+        tagTitulo.innerHTML = "Curso de ReactJs";
+
+        const tagModulos = document.getElementsByClassName('modulos');
+        tagModulos[0].style.color = 'blue';
+        console.log(tagModulos[0]);
+
+        const tagName = document.getElementsByTagName('p');
+        console.log(tagName);
+
+        // APENAS O PRIMEIRO QUE POSSUI A CLASS MODULOS
+        const tagSelector = document.querySelector(".modulos");
+        tagSelector.style.background = 'gray';
+
+
+        // ME TRAZ TODOS AS TAG QUE TEM A CLASS MODULOS
+        const tagSelectorAll = document.querySelectorAll(".modulos");
+        tagSelectorAll[2].style.background = 'pink';
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<html>
+    <h1 id="texto">CLIQUE AQUI</h1>
+    
+    <script>
+        const txt = document.getElementById('texto');
+
+        txt.addEventListener('click', function(msg){
+            console.log(msg.target.tagName) 
+            //(target) RETORNA A TAGNAME DO ELEMENTO QUE ESTOU CLICANDO COM A FUNÇÃO (msg)
+        })
+    </script>
+</html>

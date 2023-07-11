@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form>
+        <input type="text" name="valor1" id="valor1">
+        <input type="text" name="valor2" id="valor2">
+        <button type="button" id="somar" onclick=soma()>Somar</button>
+        <div id="res"></div>
+    </form>
+    
+    <script>
+        const demo = document.querySelector('#res')
+
+        function soma() {
+            const n1 = document.querySelector('#valor1')
+            const n2 = document.querySelector('#valor2')
+
+            const v1 = parseInt(n1.value)
+            const v2 = parseInt(n2.value)
+            demo.innerHTML = v1+v2
+        }
+
+    </script>
+</body>
+</html>
