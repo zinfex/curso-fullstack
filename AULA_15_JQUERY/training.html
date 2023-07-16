@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">NÃO CLIQUE</button>
+    <h1 id="txt" style="display: none;">CLICOU</h1>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>
+        const btn = $('#btn');
+
+        btn.on('click', function() {
+            $('#txt').toggle()
+        })
+    </script>
+</body>
+</html>   

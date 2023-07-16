@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+</head>
+<body>
+
+    <button id="btn">Exibir e Ocultar Texto</button>
+    <button id="exibir">Exibir</button>
+    <button id="ocultar">Ocultar</button>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, quia. Illo quae asperiores cupiditate quisquam fuga obcaecati nihil recusandae, suscipit quam perspiciatis animi rem, ipsa sint veniam? Aperiam, nisi similique?
+    </p>
+    
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script> 
+
+       // ARROW FUNCTION JS
+        $("#btn").on('mouseover',  () => {
+            $("p").toggle();
+        });
+
+        $("#exibir").on('click', () => {
+            $("p").show();
+        });
+
+        $("#ocultar").on('click', () => {
+            $("p").hide();
+        });
+
+        $("#btn").on('click', () => {
+            $('p').toggle();
+        });
+
+    </script>
+
+</body>
+</html>

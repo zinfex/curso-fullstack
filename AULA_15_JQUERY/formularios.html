@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+
+    <form>
+        <input type="text" id="cep" placeholder="00000000">
+        <br/>
+        <button type="button" id="btn">Buscar CEP</button> <br><br>
+
+        <div class="campo"><input type="text" id="logradouro" placeholder="RUA"></div>
+        <div class="campo"><input type="text" id="bairro" placeholder="BAIRRO"></div>
+        <div class="campo"><input type="text" id="localidade" placeholder="CIDADE"></div>
+        <div class="campo"><input type="text" id="uf" placeholder="ESTADO"></div>
+        
+    </form>
+    
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>
+        $("#btn").on('click', () => {
+            const cep = $("#cep").val();
+
+            const configuracao = {
+                url: "https://viacep.com.br/ws/"+cep+"/json/",
+                method: "GET",
+                success: function(resposta) {
+                    console.log(resposta);
+
+                    $("#logradouro").val(resposta.logradouro)
+                    $("#bairro").val(resposta.bairro)
+                    $("#localidade").val(resposta.localidade)
+                    $("#uf").val(resposta.uf)
+                },
+                error: function(error) {
+                    console.error(error);
+                }
+            };
+
+            $.ajax(configuracao);
+        });
+    </script>
+</body>
+</html>

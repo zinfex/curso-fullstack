@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1">CLIQUE</button> 
+    <p id="texto1">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor assumenda nihil excepturi! Eos, quidem unde sed ab deleniti, adipisci iusto maxime saepe excepturi dolores asperiores odio fuga earum, sint officiis.
+    </p>
+
+    <br><br>
+    
+    <button id="btn2">MOUSE</button>
+    <p id="texto2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo soluta, veniam ratione officia fugiat doloribus cumque tenetur unde saepe! Debitis quas quam excepturi, similique ex dolorem omnis enim impedit dicta.
+    </p>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>
+
+        // ARROW FUNCTION
+        $('#btn1').on('click', () => {
+            $('#texto1').toggle()
+        })
+
+        // FUNCTION TRADICIONAL
+        $('#btn2').on('mouseover', function() {
+            $('#texto2').toggle()
+        })
+
+    </script>
+</body>
+</html>

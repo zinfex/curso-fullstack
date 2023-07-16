@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fullstack</h1>
+    <h2 id="titulo">JS + Jquery</h2>
+    <p class="texto">DOM</p>
+    <p class="texto">Elemento CSS</p>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>
+        //JS PURO
+        const h1 = document.querySelector('h1');
+        h1.style.color = 'red'
+
+        //JQUERY
+        const h1jquery = $('h1');
+        h1jquery.css("background", "yellow");
+        h1jquery.html("olá, jquery");
+
+        $('h1').css('padding', '10px').html('Olá, jquery sem const');
+        $('#titulo').css('background', 'blue');
+
+        //FORMA DE OBJETOS
+        $('.texto').css({
+            background: 'green',
+            color: 'white',
+        })
+    </script>
+</body>
+</html>
