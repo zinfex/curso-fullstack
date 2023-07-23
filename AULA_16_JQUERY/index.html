@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body>
+    <form id="form">
+        <div>
+            <label for="nome" class="form-label">Nome do aluno</label>
+            <input type="text" id="nome" class="form-control" placeholder="nome">
+            <input type="email" id="email" class="form-control" placeholder="email">
+        </div>
+        <div>
+            <input type="submit" class="btn btn-primary">
+        </div>
+    </form>                                   
+
+    <table id="table" class="table table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome - Email</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+
+        <tbody></tbody>
+    </table>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>
+        let lista = []
+
+        function listarDados() {
+            const tbody = $('#table tbody')
+            tbody.html('')
+
+            lista.map((valor, indice) => {
+                tbody.append(`
+                    <tr>
+                        <td>${indice+1}</td>
+                        <td>${valor.nome} - ${valor.email}</td>
+                        <td>
+                            <button onclick='editar(${indice})'class='btn btn-primary'>Editar</button>
+                            <button onclick='excluir(${indice})'class='btn btn-danger'>Excluir</button>
+                        </td>
+                    </tr>
+                `)
+            })
+        }
+
+        function excluir(indice) {
+            lista.splice(indice, 1)
+            listarDados()
+        }
+
+        function editar(indice) {
+            lista[indice].nome = prompt('Nome:')
+            lista[indice].email = prompt('Email')
+            listarDados()
+        }
+
+        $('#form').on('submit', function(evento) {
+            evento.preventDefault()
+            const nome = $('#nome').val()
+            const email = $('#email').val()
+
+            lista.push({
+                nome: nome,
+                email: email
+            })
+            console.log(lista)
+
+            listarDados()
+
+            //VIA
+            //REST FULL API
+            //GET - POST - PUT - DELETE
+        })
+    </script>
+</body>
+</html>
