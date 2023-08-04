@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            padding-inline: 500px;
+        }
+
+        ul {
+            list-style: none;
+        }
+        
+        li {
+            padding: 30px;
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+
+    <p style="display: none;">FIM</p>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>
+        /*Ao clicar em um item da lista, a cor de fundo desse item deve ser 
+        alterada para uma cor aleatória.*/
+
+        let itensSelecioados = 0
+
+        $('li').click(function() {
+            $(this).css('background-color', '#00FF00')
+            itensSelecioados++
+
+            if (itensSelecioados == $('li').length) {
+                $('p').show()
+            }
+        })
+    </script>
+</body>
+</html>

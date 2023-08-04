@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de nomes</title>
+</head>
+<body>
+    <button id="add">Adicionar Nomes</button>
+    <ul></ul>
+    <button id="delete">Limpar</button>
+    
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>
+        let lista = []
+        
+        $('#add').click(() => {
+            const nome = prompt('Escreva algum nome')
+                
+            let primeiraNota = parseFloat(prompt('Primeira nota'))
+            let segundaNota = parseFloat(prompt('Segunda nota'))
+            let media = ((primeiraNota + segundaNota) / 2)
+            
+            const newUser = {
+                nome,
+                media,
+                notas: {primeiraNota, segundaNota}
+            }
+            
+            if ((primeiraNota > 10 || primeiraNota < 0) || (segundaNota > 10 || segundaNota < 0)) {
+                alert('Digite de 0 a 10')
+            } else {
+                lista.push(newUser)
+            } 
+            
+            $('ul').empty()
+            
+            $('ul').append(lista.map((user) => (
+                `<li>${user.nome} - ${user.media}</li>`
+            )))
+        })
+
+        $('#delete').click(()=>{
+            $('ul').empty()
+            lista.length = 0
+        })
+
+        console.log(lista)
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exemplo</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 300px;
+        }
+    </style>
+</head>
+<body>
+    <button id="botao">CLIQUE AQUI</button>
+    
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>
+        /*Ao clicar nesse botão a cor de fundo da página 
+        deve ser alterada para uma cor aleatória.*/
+
+        $('#botao').click(function() {
+            const corAleatoria = gerarCorAleatoria()
+            $('body').css('background-color', corAleatoria)
+        })
+
+        function gerarCorAleatoria() {
+            const letrasHexadecimais = '0123456789ABCDEF';
+            let cor = '#';
+            for (let i = 0; i < 6; i++) {
+                cor += letrasHexadecimais[Math.floor(Math.random() * 16)];
+            }
+            return cor;
+        }
+        
+    </script>
+</body>
+</html>
