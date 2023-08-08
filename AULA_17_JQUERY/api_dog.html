@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+</head>
+<body>
+    <button id="btn">consultar</button>
+    <div id="res"></div>
+
+    <script>
+        $('#btn').click(function() {
+            $.ajax({
+                url: "https://dog.ceo/api/breeds/image/random",
+                method: "GET",
+                dataType: "json",
+                success: function(data) {
+                    $("#res").empty()
+                    $('#res').append(`<img src="${data.message}">"`)
+                },
+                error: function() {
+                    $('#res').html("<p>Erro ao carregar as imagens</p>")
+                }
+            })
+        })
+    </script>
+</body>
+</html>

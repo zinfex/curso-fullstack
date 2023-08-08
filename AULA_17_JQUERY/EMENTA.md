@@ -11,7 +11,6 @@ EXERCÍCIO:
 
 ----------------------------------------------
 
-
 PROJETO FRONTEND:
 
 NPM
@@ -28,3 +27,4 @@ REACTJS
  
 ---------------------------------------- 
 
+ESTUDO DA SEMANA: REST FULL API, REACT, LOCALSTORAGE, CRUD
