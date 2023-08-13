@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="btn">consultar</button>
+    <div id="res"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>
+    $('#btn').on('click', function() {
+        $.ajax({
+            url: "https://minhaapi--arthursouza41.repl.co/",
+            method: "GET",
+            dataType: "json",
+
+            success: function(data) {
+                let res = fetch("https://minhaapi--arthursouza41.repl.co/")
+                .then(res=>res.json())
+                .then(dados => {
+                    $('#res').append(dados.valor)
+                 })
+            },
+            error: function() {
+                $('#res').html('<p>Erro ao consumir API</p>')
+            }
+        })
+    })
+    </script>
+</body>
+</html>

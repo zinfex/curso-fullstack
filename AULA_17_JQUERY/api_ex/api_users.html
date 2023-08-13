@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Consultar dados</button>
+    <div id="res"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <script>
+        $('#btn').on('click', function() {
+            $.ajax({
+                url: "https://reqres.in/api/users/",
+                method: "GET",
+                dataType: "json",
+                success: function(api) {
+                    function nomeCompleto(firstname, lastname) {
+                        return firstname + ' ' + lastname
+                    }
+                    
+                    for(var c in api.data) {
+                        $('#res').append(
+                            `<p> Usuário ${c}: <img src="${api.data[c].avatar}"> <br> Nome: ${nomeCompleto(api.data[c].first_name ,api.data[c].last_name)} <br> Email: ${api.data[c].email} </p>`
+                        )
+                    }
+                },
+                error: function() {
+                    $('#res').append('<p>Erro ao consultar os dados da API</p>')
+                    $('#res').append('<p>Url da api: https://reqres.in/api/users/</p>')
+                }
+            })
+        })
+    </script>
+</body>
+</html>

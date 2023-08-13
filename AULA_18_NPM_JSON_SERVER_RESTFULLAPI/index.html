@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- https://dontpad.com/iw -->
+    <form>
+        <input type="text" name="login" id="login">
+        <br />
+        <input type="password" name="senha" id="senha">
+        <button type="button" id="btn">Salvar</button>
+    </form>
+
+    <div class="container">
+        <div class="row">
+            <table class="table" id="tabela_usuarios">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Login</th>
+                        <th>Açoes</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    
+        
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+
+        function listarDados() {
+            $.ajax({
+                url: "http://localhost:3000/usuarios",
+                method: "GET",
+                success: function (resposta) {
+                    
+                    const tabela = $("#tabela_usuarios tbody");
+                    tabela.html('');
+                    resposta.map((item, indice) => {
+                        tabela.append(`
+                            <tr>
+                                <td>${item.id}</td>
+                                <td>${item.login}</td>
+                                <td>
+                                    <button class="btn btn-primary">Editar</button>
+                                    <button class="btn btn-danger" onclick="excluir(${item.id})">Excluir</button>
+                                </td>
+                            </tr>
+                        `);
+                    });
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+        }
+        listarDados();
+
+        function excluir(id) {
+            $.ajax({
+                url: "http://localhost:3000/usuarios/"+id,
+                method: 'DELETE',
+                success: function(resposta) {
+                    alert("Deletado com sucesso");
+                    listarDados();
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+        }
+
+        $("#btn").on('click', function(){
+            const login = $("#login").val();
+            const senha = $("#senha").val();
+            $.ajax({
+                url: "http://localhost:3000/usuarios",
+                method: 'POST',
+                data: {
+                    login: login,
+                    senha: senha
+                },
+                success: function(resposta) {
+                    console.log(resposta);
+                    alert("Salvo com sucesso")
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+        });
+
+        // // GET = CONSULTAR DADOS
+        // $.ajax({
+        //     url: "http://localhost:3000/usuarios",
+        //     method: 'GET',
+        //     success: function(resposta) {
+        //         console.log(resposta);
+        //     },
+        //     error: function(error) {
+        //         console.log(error);
+        //     }
+        // });
+
+        // // POST - GRAVAR O DADO
+        // $.ajax({
+        //     url: "http://localhost:3000/usuarios",
+        //     method: 'POST',
+        //     data: {
+        //         nome: "Admin",
+        //         login: "admin",
+        //         senha: 'admin'
+        //     },
+        //     success: function(resposta) {
+        //         console.log(resposta);
+        //     },
+        //     error: function(error) {
+        //         console.log(error);
+        //     }
+        // });
+
+
+        // // PUT - ATUALIZAR
+        // $.ajax({
+        //     url: "http://localhost:3000/usuarios/1",
+        //     method: 'PUT',
+        //     data: {
+        //         nome: "Admin",
+        //         login: "admin",
+        //         senha: 'admin'
+        //     },
+        //     success: function(resposta) {
+        //         console.log(resposta);
+        //     },
+        //     error: function(error) {
+        //         console.log(error);
+        //     }
+        // });
+
+
+        // // DELETE - DELETAR
+        // $.ajax({
+        //     url: "http://localhost:3000/usuarios/1",
+        //     method: 'DELETE',
+        //     success: function(resposta) {
+        //         console.log(resposta);
+        //     },
+        //     error: function(error) {
+        //         console.log(error);
+        //     }
+        // });
+    </script>
+
+</body>
+</html>

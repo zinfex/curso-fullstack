@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Array com localStorage</h2>
+    <label for="">Informe um valor</label>
+    <input type="text"> <br>
+    <button id="add">Add</button>
+    <button id="show">Show</button>
+    <button id="clear">Clear</button>
+    <ul></ul>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>
+        //tutorial do código: https://www.youtube.com/watch?v=YlAs11EiIJc
+        var lista = []
+
+        $('#add').click(function(){
+            lista.push($('input').val())
+            $('input').val("")
+            localStorage.minhaLista = JSON.stringify(lista) //STRINGFY(TRANSFORMAR EM FORMATO DE OBJETO)
+        })
+
+        $('#show').click(function(){
+            for(var i in lista)
+            $('ul').append(`<li>${lista[i]}</li>`)
+        })
+
+        $('#clear').click(function(){
+            lista = []
+            localStorage.minhaLista = JSON.stringify(lista) //Atualizar localstorage
+        })
+
+        console.log(lista)
+    </script>
+</body>
+</html>

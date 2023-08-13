@@ -16,8 +16,7 @@ PROJETO FRONTEND:
 NPM
 JSON-SERVER - SIMULA UM BACKEND
 DB.JSON - GET, POST, PUT E DELETE
-
-REST FUL API
+REST FULL API
 
 REACTJS
 ----------------------------------------
@@ -27,4 +26,8 @@ REACTJS
  
 ---------------------------------------- 
 
-ESTUDO DA SEMANA: REST FULL API, REACT, LOCALSTORAGE, CRUD
+ESTUDO DA SEMANA: API, LOCALSTORAGE, CRUD
+
+obs:
+    Object.keys(OBEJTO).length <- saber o tamanho do objeto
+    localStorage <- armazenar dados no navegador do usuario

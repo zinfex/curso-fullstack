@@ -1,0 +1,28 @@
+{
+  "usuarios": [
+    {
+      "login": "admin",
+      "senha": "123123",
+      "id": 6
+    },
+    {
+      "login": "admin",
+      "senha": "123123",
+      "id": 7
+    },
+    {
+      "login": "admin",
+      "senha": "123123",
+      "id": 8
+    },
+    {
+      "login": "admin",
+      "senha": "123123",
+      "id": 10
+    }
+  ],
+  "clientes": [],
+  "alunos": [],
+  "receitas": [],
+  "despesas": []
+}

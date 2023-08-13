@@ -1,0 +1,50 @@
+MODULO:
+JAVASCRIPT ADVANCED
+
+OBJETIVO:
+- NPM
+- JSON-SERVER
+- REST FUL API
+
+CONTEUDO:
+- UTILIZANDO NPM PARA INSTALAR DEPENDENCIAS
+- APRENDENDO A UTILIZAR O JSON SERVER
+- APRENDENDO A ARQUITETURA REST FUL API
+
+
+COMANDOS DO TERMINAL:
+node -v
+npm -v
+
+CONFIGURANDO UM PROJETO COM NPM:
+EXECUTE O COMANDO ABAIXO:
+npm init
+
+
+// INSTALACAO DO BOOTSTRAP
+
+npm install bootstrap
+npm remove bootstrap
+npm i bootstrap
+
+npm install jquery
+
+npm install animate.css
+
+npm i bootstrap jquery animate.css
+
+// JSON SERVER SIMULA UMA REST FUL API
+npm i json-server -g
+
+json-server --watch db.json
+
+
+
+API
+----------------------------------
+localhost:3000/usuarios
+
+GET - localhost:3000/usuarios
+POST - localhost:3000/usuarios
+PUT - localhost:3000/usuarios/1
+DELETE - localhost:3000/usuarios/1
