@@ -7,12 +7,14 @@
 </head>
 <body>
     
-    <input type="text" id="name" placeholder="name">
-    <input type="email" id="email" placeholder="email">
-
-    <button id="enviar">Enviar</button>
-    <button id="exibir">Exibir</button>
-    <button id="limpar">Limpar</button>
+    <label>
+        <input type="text" id="name" placeholder="name">
+        <input type="email" id="email" placeholder="email">
+    
+        <button id="enviar">Enviar</button>
+        <button id="exibir">Exibir</button>
+        <button id="limpar" type="submit">Limpar</button> 
+    </label>
 
     <ul id="box" style="border: 1px solid black; margin: 20px;"></ul>
 
@@ -52,6 +54,8 @@
                             `<li>ID:${usuarios[i].id} Nome:${JSON.stringify(usuarios[i].name)} <br>  Email:${JSON.stringify(usuarios[i].email)} <br><br></li>`
                         )
                     }
+
+                    console.log(usuarios)
                     
                 },
                 error: function(erro) {
@@ -61,16 +65,34 @@
             })
         })
 
-        //DELETE NO EXCLUIR USUARIOS
-        // $('#limpar').on('click', function() {
-        //     $.ajax({
-        //         url: "http://localhost:3000/users",
-        //         method: "DELETE",
-        //         success: function(usuario) {
-                    
-        //         }
-        //     })
-        // })
+        //GET PARA BUSCAR OS DADOS + DELETE PARA APAGAR OS DADOS
+        $('#limpar').on('click', function() {
+            $.ajax({
+                url: 'http://localhost:3000/users',
+                method: 'GET',
+                success: function(usuarios) {
+                    const totalUsers = usuarios.length;
+
+                    for (var id = 1; id <= totalUsers; id++) {
+                        $.ajax({
+                            url: "http://localhost:3000/users/"+id,
+                            type: "DELETE",
+                            success: function() {
+                                console.log('Usuário excluído');
+                            },
+                            error: function(erro) {
+                                alert('Erro ao excluir usuário');
+                                console.log(erro);
+                            }
+                        });
+                    }
+                },
+                error: function(erro) {
+                    alert('Erro ao obter a lista de usuários');
+                    console.log(erro);
+                }
+            });
+        });
         </script>
 </body>
 </html>

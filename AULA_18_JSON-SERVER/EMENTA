@@ -40,3 +40,11 @@ GET - localhost:3000/usuarios
 POST - localhost:3000/usuarios
 PUT - localhost:3000/usuarios/1
 DELETE - localhost:3000/usuarios/1
+
+----------------------------------
+ESTUDO SEMANAL:
+    - Terminar projetos.
+    - Construir projetos que envolva API
+    - Aprender a usar o INSOMNIA
+    - Estudar métodos tradicionais de consumir uma api sem ajax e sem jquery
+    - Melhorar habilidade em localStorage
