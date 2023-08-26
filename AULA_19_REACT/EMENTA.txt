@@ -1,0 +1,6 @@
+NPM - NODE PACKAGE MANAGER
+
+npm create vite@latest projeto1 -- --template react
+
+npm install
+npm run dev
