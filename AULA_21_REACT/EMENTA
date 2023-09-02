@@ -1,0 +1,44 @@
+MODULO: 
+ - REACTJS 
+ 
+OBJETIVOS: 
+ - COMPONENTES 
+ - PROPS 
+ - CHILDREN 
+ - STYLES 
+ - REACT ROUTER DOM 
+ - USESTATE 
+ - USEEFFECT 
+  
+ 
+CONTEUDO: 
+ - CRIAR COMPONENTES PARA ESTRUTURA NOSSO LAYOUT 
+ 
+EXERCÍCIO DE CASA: 
+COMANDOS PARA CONFIGURAR O PRIMEIRO PROJETO: 
+npm create vite@latest projeto1 -- --template react 
+ 
+INFORME O NOME DO PROJETO 
+ACESSE A PASTA DO SEU PROJETO: 
+- cd nome_do_projeto 
+INSTALAR AS DEPENDENCIAS DO PROJETO 
+- npm install 
+EXECUTAR O PROJETO 
+- npm run dev 
+ 
+npm install react-router-dom 
+npm install react-bootstrap bootstrap 
+BrowserRouter
+npm install react-bootstrap bootstrap
+----------------------------------------------------------
+EXERCÍCIO DE CASA: 
+COMANDOS PARA CONFIGURAR O PRIMEIRO PROJETO: 
+- npm create vite@latest 
+ 
+INFORME O NOME DO PROJETO 
+ACESSE A PASTA DO SEU PROJETO: 
+- cd nome_do_projeto 
+INSTALAR AS DEPENDENCIAS DO PROJETO -
+- npm install 
+EXECUTAR O PROJETO 
+- npm run dev
