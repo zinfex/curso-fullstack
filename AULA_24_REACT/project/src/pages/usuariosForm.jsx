@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Button, Table } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
 function UsuariosForm() {
     return (
