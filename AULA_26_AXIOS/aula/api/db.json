@@ -1,0 +1,27 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Daniel",
+      "login": "sefaz@gmail.com",
+      "senha": "designer",
+      "token": "DAJD09ADIDOASI023KOU90UASKLDMSAPJ"
+    },
+    {
+      "id": 2,
+      "nome": "zinfex",
+      "login": "zinfex@gmail.com",
+      "senha": "plana",
+      "token": "18293DSDJOSIDJ2U903289D4324324234"
+    },
+    {
+      "nome": "Marcio 2",
+      "login": "marcio",
+      "senha": "",
+      "id": 3
+    }
+  ],
+  "produtos": [],
+  "clientes": [],
+  "funcionarios": []
+}
