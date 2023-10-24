@@ -1,0 +1,80 @@
+MODULO:
+BANCO DE DADOS
+
+
+DADOS DE ACESSO AO NOSSO BANCO:
+- host
+- user
+- password
+- port
+
+NESSE CASO O MYSQL UTILIZA OS SEGUINTES DADOS;
+host: localhost
+user: root
+password: ''
+port: 3306
+
+
+// COMANDOS SQL PARA ADMINSTRAR BANCO DE DADOS
+// CRIAR E DELETAR UM BANCO DE DADOS
+
+- CREATE DATABASE nome_banco;
+- DROP DATABASE nome_banco;
+
+// CRIANDO E DELETANDO TABELAS;
+
+CREATE TABLE alunos(
+  id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  nome VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NULL
+);
+
+DROP TABLE alunos;
+
+// ALTERANDO ESTRUTURA DA TABELA
+ALTER TABLE alunos ADD COLUMN cpf varchar(11) NOT NULL;
+ALTER TABLE alunos DROP COLUMN cpf;
+
+------------------------------------------------
+
+CRUD - CREATE - READ - UPDATE - DELETE
+
+----------------------------------
+INSERT INTO alunos(nome, email) 
+VALUES('Matheus', 'matheus@gmail.com');
+
+INSERT INTO alunos(nome, email) 
+VALUES('Zinfe', 'zinfe@gmail.com');
+
+INSERT INTO alunos(nome, email) 
+VALUES('Marcio', 'marcio@gmail.com');
+----------------------------------
+
+SELECT * FROM alunos;
+SELECT * FROM alunos WHERE id = 2;
+SELECT * FROM alunos WHERE nome = 'Matheus';
+
+SELECT * FROM alunos WHERE nome like 'Ma%';
+SELECT * FROM alunos WHERE nome like 'Ma%' AND id = 3;
+
+SELECT nome FROM alunos;
+SELECT nome, email FROM alunos;
+
+----------------------------------
+
+UPDATE alunos SET nome = 'Maria' WHERE nome = 'Marcio';
+
+-----------------------------------
+
+DELETE FROM alunos WHERE id = 2;
+
+-----------------------------------
+
+CREATE TABLE dependentes (
+	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    nome varchar(100),
+    cpf varchar(11),
+    tipo_dependencia varchar(100),
+    cliente_id int,
+    FOREIGN KEY(cliente_id) REFERENCES clientes(id)
+);\
