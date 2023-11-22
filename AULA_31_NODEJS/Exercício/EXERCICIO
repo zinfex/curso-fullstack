@@ -1,0 +1,32 @@
+EXERCÍCIO:
+
+OBS: ANTES DE CRIAR O CRUD NO NODEJS. DEVE SER CRIADO
+O BANCO DE DADOS COM AS TABELAS REFERENTES A CADA CRUD.
+
+1. CRIAR UM CRUD DE PRODUTOS COM OS CAMPOS
+id, nome, valor, quantidade 
+
+2. CRIAR UM CRUD DE CLIENTES
+id, nome, cpf, telefone e email
+
+
+---------------------------------------------------------
+REST FUL API
+
+API
+
+GET - localhost:8000/usuarios
+GET - localhost:8000/usuarios/id
+
+POST - localhost:8000/usuarios
+PUT - localhost:8000/usuarios/id
+DELETE - localhost:8000/usuarios/id
+
+-------------------------------------------
+localhost:5173/usuarios
+
+PASSO A PASSO:
+    - Criar backend (Server)
+    - Criar frontend (Client)
+    - (Front) Fazer envio de dados pro server com Axios
+    - (Back) Preparar recebimento de dados do front para database SQL

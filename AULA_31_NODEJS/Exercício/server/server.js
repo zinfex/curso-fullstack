@@ -1,9 +1,12 @@
 import express from "express";
+import cors from 'cors'
 import RotaProdutos from "./routes/RotaProdutos.js";
 import RotaClientes from "./routes/RotaClientes.js";
 
+
 const app = express();
 
+app.use(cors())
 app.use(express.json())
 
 
@@ -17,3 +20,4 @@ app.use(RotaClientes)
 app.listen(8000, () => {
     console.log('executando servidor')
 })
+
