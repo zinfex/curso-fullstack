@@ -18,6 +18,21 @@ class UsuariosModel {
         return resultados
     }
 
+    async findOne(id) {
+        const con = new Conexao();
+        const sql = "SELECT * FROM usuarios WHERE id = " + id
+        const dados = {}
+        const resultados = await con.query(sql, dados)
+        return resultados
+    }
+    
+    async delete(id) {
+        const con = new Conexao();
+        const sql = "DELETE FROM usuarios WHERE id = " + id
+        const dados = {}
+        const resultados = await con.query(sql, dados);
+        return resultados
+    }
 }
 
 export default UsuariosModel;
