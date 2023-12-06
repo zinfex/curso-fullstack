@@ -10,8 +10,6 @@ app.get('/', (req, res) => {
 
 app.use(UsuariosRoutes)
 
-
-
 app.listen(8000, () => {
-    console.log('Rodando servidor')
+    console.log('Servidor executando')
 })
